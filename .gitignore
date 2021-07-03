@@ -1,3 +1,6 @@
 .git
 .metadata
 RemoteSystemsTempFiles
+*.class
+bin/
+**/bin/

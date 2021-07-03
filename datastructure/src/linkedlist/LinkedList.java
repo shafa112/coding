@@ -5,6 +5,10 @@ public class LinkedList {
 	Node head;
 	Node tail;
 	
+	public Node getHead() {
+		return head;
+	}
+	
 	// O(1)
 	public void insertNodeAtStart(int data) {
 		if(head==null) {
@@ -17,7 +21,7 @@ public class LinkedList {
 		}
 	}
 	
-	// O(n)
+	// O(1)
 	public void insertNodeAtEnd(int data) {
 		if(head==null) {
 			head = new Node(data);
@@ -53,7 +57,7 @@ public class LinkedList {
 		return null;
 	}
 	
-	public void deleteFirst(int data) {
+	public void deleteFirstMatch(int data) {
 		if(head == null) return;
 		if(head.data == data) {
 			head = head.next;
@@ -75,6 +79,13 @@ public class LinkedList {
 				dnode = dnode.next;
 			}
 		}
+	}
+	
+	public Node deleteHead() {
+		if(head == null) throw new RuntimeException("Linked List is empty already");
+		Node temp = head;
+		head = head.next;
+		return temp;
 	}
 	
 	public boolean isExist(int data) {
