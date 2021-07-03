@@ -5,3 +5,4 @@ RemoteSystemsTempFiles
 bin/
 **/bin/
 **/*/*.class
+.idea
