@@ -4,3 +4,4 @@ RemoteSystemsTempFiles
 *.class
 bin/
 **/bin/
+**/*/*.class
